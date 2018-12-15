@@ -11,10 +11,7 @@ import Seo from "../components/Seo";
 const CategoryPage = props => {
   const {
     data: {
-      posts: { edges: posts },
-      site: {
-        siteMetadata: { }
-      }
+      posts: { edges: posts }
     }
   } = props;
 

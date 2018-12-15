@@ -12,10 +12,7 @@ const CategoryTemplate = props => {
   const {
     pageContext: { category },
     data: {
-      allMarkdownRemark: { totalCount, edges },
-      site: {
-        siteMetadata: { }
-      }
+      allMarkdownRemark: { totalCount, edges }
     }
   } = props;
 

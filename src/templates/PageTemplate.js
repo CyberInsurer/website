@@ -9,10 +9,7 @@ import { ThemeContext } from "../layouts";
 const PageTemplate = props => {
   const {
     data: {
-      page,
-      site: {
-        siteMetadata: { }
-      }
+      page
     }
   } = props;
 

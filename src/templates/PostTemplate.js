@@ -12,10 +12,7 @@ const PostTemplate = props => {
   const {
     data: {
       post,
-      authornote: { html: authorNote },
-      site: {
-        siteMetadata: { }
-      }
+      authornote: { html: authorNote }
     },
     pageContext: { next, prev }
   } = props;
