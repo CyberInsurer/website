@@ -67,8 +67,9 @@ font:
   # font options
   family:
     initial: 'Arial, sans-serif'
-    target: &font-family-target 'Open Sans'
+    target: &font-family-target 'Source Sans Pro'
   weight:
+    light: 300
     standard: 400
     bold: 600
   size:

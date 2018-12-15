@@ -19,6 +19,7 @@ class Layout extends React.Component {
     super();
 
     this.state = {
+      font300loaded: false,
       font400loaded: false,
       font600loaded: false,
       screenWidth: 0,
@@ -27,8 +28,10 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Open Sans", 400);
-      this.loadFont("font600", "Open Sans", 600);
+      this.loadFont("font200", "Source Sans Pro", 200);
+      this.loadFont("font300", "Source Sans Pro", 300);
+      this.loadFont("font400", "Source Sans Pro", 400);
+      this.loadFont("font600", "Source Sans Pro", 600);
     }
   }
 
@@ -143,19 +146,18 @@ class Layout extends React.Component {
                       }
                       body, button, input {
                         font-family: ${this.state.font400loaded
-                          ? "'Open Sans', sans-serif;"
+                      ? "'Source Sans Pro', sans-serif;"
                           : "Arial, sans-serif;"};
                       }
                       h1,
                       h2,
                       h3 {
-                        font-weight: ${this.state.font600loaded ? 600 : 400};
+                        font-weight: 300;
                         line-height: 1.1;
-                        letter-spacing: -0.03em;
                         margin: 0;
                       }
                       h1 {
-                        letter-spacing: -0.04em;
+
                       }
                       p {
                         margin: 0;

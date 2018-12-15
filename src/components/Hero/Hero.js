@@ -12,8 +12,9 @@ class Hero extends React.Component {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
       strings: ["entrepreneurs...", "agencies...", "freelancers...", "start ups..."],
-      typeSpeed: 50,
-      backSpeed: 50,
+      typeSpeed: 75,
+      backSpeed: 30,
+      backDelay: 750,
       loop: true
     };
     // this.el refers to the <span> in the render() method
@@ -78,10 +79,10 @@ class Hero extends React.Component {
         h1 {
           text-align: center;
           font-size: ${theme.hero.h1.size};
-          margin: ${theme.space.stack.m};
+          font-weight: 200;
+          margin: ${theme.space.stack.s};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
-          text-remove-gap: both 0 "Open Sans";
 
           :global(strong) {
             position: relative;
