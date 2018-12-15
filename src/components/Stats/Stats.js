@@ -95,8 +95,6 @@ class Stats extends React.Component {
 };
 
 Stats.propTypes = {
-    scrollToContent: PropTypes.func.isRequired,
-    backgrounds: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired
 };
 

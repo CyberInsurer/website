@@ -14,7 +14,7 @@ const PostTemplate = props => {
       post,
       authornote: { html: authorNote },
       site: {
-        siteMetadata: { facebook }
+        siteMetadata: { }
       }
     },
     pageContext: { next, prev }
@@ -74,13 +74,6 @@ export const postQuery = graphql`
     authornote: markdownRemark(fileAbsolutePath: { regex: "/author/" }) {
       id
       html
-    }
-    site {
-      siteMetadata {
-        facebook {
-          appId
-        }
-      }
     }
   }
 `;

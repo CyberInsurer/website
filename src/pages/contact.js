@@ -9,11 +9,7 @@ import Seo from "../components/Seo";
 
 const ContactPage = props => {
   const {
-    data: {
-      site: {
-        siteMetadata: { }
-      }
-    }
+
   } = props;
 
   return (
@@ -39,16 +35,3 @@ ContactPage.propTypes = {
 };
 
 export default ContactPage;
-
-//eslint-disable-next-line no-undef
-export const query = graphql`
-  query ContactQuery {
-    site {
-      siteMetadata {
-        facebook {
-          appId
-        }
-      }
-    }
-  }
-`;

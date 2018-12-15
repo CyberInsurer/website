@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Cyber from "../../images/svg-icons/cyber.svg";
 
 const Pitch = props => {
-    const { scrollToContent, backgrounds, theme } = props;
+    const { theme } = props;
 
     return (
         <React.Fragment>
@@ -39,8 +39,6 @@ const Pitch = props => {
 };
 
 Pitch.propTypes = {
-    scrollToContent: PropTypes.func.isRequired,
-    backgrounds: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired
 };
 

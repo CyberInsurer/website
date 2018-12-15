@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Cyber from "../../images/svg-icons/cyber.svg";
 
 const Leader = props => {
-    const { scrollToContent, backgrounds, theme } = props;
+    const { scrollToContent, theme } = props;
 
     return (
         <React.Fragment>
@@ -79,7 +79,6 @@ const Leader = props => {
 
 Leader.propTypes = {
     scrollToContent: PropTypes.func.isRequired,
-    backgrounds: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired
 };
 

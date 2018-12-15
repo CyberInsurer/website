@@ -21,50 +21,32 @@ class IndexPage extends React.Component {
     const {
       data: {
         posts: { edges: posts = [] },
-        bgDesktop: {
-          resize: { src: desktop }
-        },
-        bgTablet: {
-          resize: { src: tablet }
-        },
-        bgMobile: {
-          resize: { src: mobile }
-        },
-        site: {
-          siteMetadata: { facebook }
-        }
       }
     } = this.props;
-
-    const backgrounds = {
-      desktop,
-      tablet,
-      mobile
-    };
 
     return (
       <React.Fragment>
         <ThemeContext.Consumer>
           {theme => (
-            <Hero scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
+            <Hero scrollToContent={this.scrollToContent} theme={theme} />
           )}
         </ThemeContext.Consumer>
 
         <ThemeContext.Consumer>
           {theme => (
-            <Pitch scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
+            <Pitch scrollToContent={this.scrollToContent} theme={theme} />
           )}
         </ThemeContext.Consumer>
 
         <ThemeContext.Consumer>
           {theme => (
-            <Stats scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
+            <Stats scrollToContent={this.scrollToContent} theme={theme} />
           )}
         </ThemeContext.Consumer>
 
         <ThemeContext.Consumer>
           {theme => (
-            <Leader scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
+            <Leader scrollToContent={this.scrollToContent} theme={theme} />
           )}
         </ThemeContext.Consumer>
 
@@ -120,28 +102,6 @@ export const query = graphql`
             }
           }
         }
-      }
-    }
-    site {
-      siteMetadata {
-        facebook {
-          appId
-        }
-      }
-    }
-    bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 1200, quality: 90, cropFocus: CENTER) {
-        src
-      }
-    }
-    bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
-        src
-      }
-    }
-    bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
-      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
-        src
       }
     }
   }

@@ -47,12 +47,5 @@ export const pageQuery = graphql`
         title
       }
     }
-    site {
-      siteMetadata {
-        facebook {
-          appId
-        }
-      }
-    }
   }
 `;
