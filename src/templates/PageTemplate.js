@@ -11,7 +11,7 @@ const PageTemplate = props => {
     data: {
       page,
       site: {
-        siteMetadata: { facebook }
+        siteMetadata: { }
       }
     }
   } = props;
@@ -26,7 +26,7 @@ const PageTemplate = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo data={page} facebook={facebook} />
+      <Seo data={page} />
     </React.Fragment>
   );
 };

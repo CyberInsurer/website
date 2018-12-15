@@ -13,7 +13,7 @@ const CategoryPage = props => {
     data: {
       posts: { edges: posts },
       site: {
-        siteMetadata: { facebook }
+        siteMetadata: { }
       }
     }
   } = props;
@@ -71,7 +71,7 @@ const CategoryPage = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo facebook={facebook} />
+      <Seo />
     </React.Fragment>
   );
 };

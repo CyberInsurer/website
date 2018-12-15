@@ -11,7 +11,7 @@ const ContactPage = props => {
   const {
     data: {
       site: {
-        siteMetadata: { facebook }
+        siteMetadata: { }
       }
     }
   } = props;
@@ -29,7 +29,7 @@ const ContactPage = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo facebook={facebook} />
+      <Seo />
     </React.Fragment>
   );
 };
