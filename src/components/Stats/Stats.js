@@ -68,8 +68,7 @@ class Stats extends React.Component {
 
         .stat {
             display: inline-block;
-            width: 25%;
-            max-width: 270px;
+            width: 100%;
             vertical-align: top;
             padding: ${theme.space.inset.l};
             margin:  ${theme.space.inline.default};
@@ -88,6 +87,17 @@ class Stats extends React.Component {
             font-size: 64px;
             line-height: 0.5em;
         }
+
+        @from-width tablet {
+
+            .stat {
+                display: inline-block;
+                width: 25%;
+                max-width: 270px;
+            }
+
+        }
+
       `}</style>
         </React.Fragment>
     );

@@ -59,10 +59,9 @@ class Hero extends React.Component {
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          min-height: 90vh;
+          min-height: 80vh;
           height: 100px;
           padding: ${theme.space.inset.l};
-          padding-top: ${theme.header.height.homepage};
         }
 
         .curve {
@@ -102,7 +101,8 @@ class Hero extends React.Component {
         }
 
         h2 {
-          margin-bottom: ${`calc(${theme.space.xl} * 2)`};
+          margin-bottom: ${`calc(${theme.space.xl} * 2.5)`};
+          font-size: ${theme.hero.h2.size};
         }
 
         button {
@@ -111,9 +111,10 @@ class Hero extends React.Component {
           border-radius: ${theme.size.radius.small};
           font-size: ${theme.font.size.m};
           text-transform: uppercase;
-          padding: ${theme.space.m} ${theme.space.l};
+          padding: ${theme.space.s} ${theme.space.l};
           cursor: pointer;
           color: ${theme.color.neutral.white};
+          margin-bottom: ${theme.space.xs};
           
           &:focus {
             outline-style: none;
@@ -134,14 +135,22 @@ class Hero extends React.Component {
         }
 
         @from-width tablet {
+          
+          .hero {
+            padding-top: 160px;
+          }
 
           h1 {
             max-width: 90%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
           }
 
+          h2 {
+            margin-bottom: ${`calc(${theme.space.xl} * 3)`};
+          }
+
           button {
-            font-size: ${theme.font.size.l};
+            font-size: ${theme.font.size.m};
           }
         }
 

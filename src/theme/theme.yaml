@@ -134,7 +134,11 @@ icon:
 # COMPONENT TOKENS
 hero:
   h1:
-    size: *font-size-xxl
+    size: *font-size-xl
+    color: *color-brand-dark
+    lineHeight: *font-line-height-xs
+  h2:
+    size: *font-size-m
     color: *color-brand-dark
     lineHeight: *font-line-height-xs
   background: 'linear-gradient(180deg, #F8FAFA, #FFFFFF)'
@@ -149,5 +153,5 @@ header:
   height:
     default: 80px
     fixed: 50px;
-    homepage: 100px;
+    homepage: 80px;
 

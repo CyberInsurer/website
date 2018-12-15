@@ -54,19 +54,21 @@ const Footer = props => {
       <style jsx>{`
         .footer {
           background: ${theme.color.neutral.gray.b};
-          padding: ${theme.space.inset.l};
+          padding: ${theme.space.inset.s};
           min-height: 300px;
         }
 
         .column {
           display: inline-block;
           vertical-align: top;
-          width: 33%;
+          width: 100%;
+          text-align: center;
+          padding: ${theme.space.inset.m};
         }
 
         .group {
           display: inline-block;
-          width: 40%;
+          width: 100%;
         }
 
         h4 {
@@ -77,6 +79,7 @@ const Footer = props => {
 
         ul {
           list-style: none;
+          margin-bottom: ${theme.space.inset.m};
         }
 
         li {
@@ -97,10 +100,31 @@ const Footer = props => {
           font-size: ${theme.font.size.xs}
         }
 
-        @from-width desktop {
+        @from-width tablet {
+          
           .footer {
             padding: ${theme.space.inset.l};
+            text-align: left;
           }
+
+          ul {
+            margin-bottom: 0;
+            text-align: left;
+          }
+
+          .column {
+            display: inline-block;
+            vertical-align: top;
+            width: 33%;
+            text-align: left;
+          }
+
+          .group {
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+          }
+
         }
       `}</style>
     </React.Fragment>

@@ -55,7 +55,7 @@ const Leader = props => {
           border-radius: ${theme.size.radius.small};
           font-size: ${theme.font.size.xs};
           text-transform: uppercase;
-          padding: ${theme.space.m} ${theme.space.l};
+          padding: ${theme.space.s} ${theme.space.l};
           cursor: pointer;
           color: ${theme.color.neutral.white};
           
