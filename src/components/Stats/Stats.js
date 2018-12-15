@@ -30,7 +30,7 @@ class Stats extends React.Component {
         <React.Fragment>
             <VisibilitySensor onChange={this.onVisibilityChange} offset={{
                 top: 10
-            }} delayedCall>
+            }} delayedCall partialVisibility>
             <section className="stats">
                 
                 <div className="stat">
