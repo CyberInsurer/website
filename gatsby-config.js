@@ -1,5 +1,11 @@
-require("dotenv").config();
+const dotenv = require("dotenv");
 const config = require("./content/meta/config");
+
+if (process.env.ENVIRONMENT !== "production") {
+  dotenv.config();
+}
+
+const { spaceId, accessToken } = process.env;
 
 const query = `{
   allMarkdownRemark( filter: { fields: { slug: { ne: null } } }) {
@@ -41,6 +47,14 @@ module.exports = {
       options: {
         component: require.resolve(`./src/layouts/`)
       }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `327toh44mjqi`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: `preview.contentful.com`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
