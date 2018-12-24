@@ -49,14 +49,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `327toh44mjqi`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: `preview.contentful.com`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
