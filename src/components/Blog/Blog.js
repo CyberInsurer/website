@@ -14,7 +14,7 @@ const Blog = props => {
             const {
               node,
               node: {
-                fields: { slug }
+                slug
               }
             } = post;
             return <Item key={slug} post={node} theme={theme} />;

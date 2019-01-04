@@ -7,28 +7,34 @@ const Item = props => {
   const {
     theme,
     post: {
-      excerpt,
-      fields: { slug, prefix },
-      frontmatter: {
-        title,
-        category,
-        author,
-        cover: {
-          children: [{ fluid }]
+      title,
+      slug,
+      excerpt: {
+        excerpt
+      },
+      cover: {
+        file: {
+          url
         }
       }
     }
   } = props;
+
+  const imgStyle = {
+    maxWidth: '100%',
+    height: '180px',
+    width: '100%',
+  };
 
   return (
     <React.Fragment>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <Img fluid={fluid} />
+            <img src={url} style={imgStyle} />
           </div>
           <p className="meta">
-              {prefix}
+              
           </p>
           <h1>
             {title}
