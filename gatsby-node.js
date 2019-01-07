@@ -40,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
+    const postTemplate = path.resolve("./src/templates/PostTemplate.js");
     resolve(
       graphql(
         `
@@ -63,6 +64,28 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+            allContentfulPost{
+              edges{
+                node{
+                  id
+                  title
+                  slug
+                  excerpt{
+                    excerpt
+                  }
+                  content {
+                    content
+                  }
+                  cover {
+                    file {
+                      url
+                      fileName
+                      contentType
+                    }
+                  }
+                }
+              }
+            }
           }
         `
       ).then(result => {
@@ -72,6 +95,21 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const items = result.data.allMarkdownRemark.edges;
+        const posts = result.data.allContentfulPost.edges;
+
+        posts.forEach(({ node }) => {
+          const slug = node.slug;
+          const id = node.id;
+
+          createPage({
+            path: "/blog/"+slug,
+            component: postTemplate,
+            context: {
+              slug,
+              id
+            }
+          });
+        });
 
         // and pages.
         const pages = items.filter(item => item.node.fields.source === "pages");

@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+const ReactMarkdown = require('react-markdown')
 
 const Bodytext = props => {
   const { html, theme } = props;
 
   return (
     <React.Fragment>
-      <div className="bodytext" dangerouslySetInnerHTML={{ __html: html }} />
-
+      <ReactMarkdown source={html} />
       <style jsx>{`
         .bodytext {
           animation-name: bodytextEntry;

@@ -1,70 +1,60 @@
-// import PropTypes from "prop-types";
-// import React from "react";
-// import { graphql } from "gatsby";
-// require("prismjs/themes/prism-okaidia.css");
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-// import Seo from "../components/Seo";
-// import Article from "../components/Article";
-// import Post from "../components/Post";
-// import { ThemeContext } from "../layouts";
+import Article from "../components/Article";
+import Post from "../components/Post";
+import { ThemeContext } from "../layouts";
 
-// const PostTemplate = props => {
-//   const {
-//     data: {
-//       post,
-//       authornote: { html: authorNote }
-//     },
-//     pageContext: { next, prev }
-//   } = props;
+const PostTemplate = props => {
+  const {
+    data
+  } = props;
 
-//   return (
-//     <React.Fragment>
-//       <ThemeContext.Consumer>
-//         {theme => (
-//           <Article theme={theme}>
-//             <Post
-//               post={post}
-//               next={next}
-//               prev={prev}
-//               authornote={authorNote}
-//               theme={theme}
-//             />
-//           </Article>
-//         )}
-//       </ThemeContext.Consumer>
+  // console.log(props.data.allContentfulPost.edges[0].node);
+  
+  return (
+    <React.Fragment>
+      <ThemeContext.Consumer>
+        {theme => (
+          <Article theme={theme}>
+            <Post
+              post={props.data.allContentfulPost.edges[0].node}
+              theme={theme}
+            />
+          </Article>
+        )}
+      </ThemeContext.Consumer>
 
-//       <Seo data={post} />
-//     </React.Fragment>
-//   );
-// };
+    </React.Fragment>
+  );
+};
 
-// PostTemplate.propTypes = {
-//   data: PropTypes.object.isRequired,
-//   pageContext: PropTypes.object.isRequired
-// };
+export default PostTemplate;
 
-// export default PostTemplate;
-
-// //eslint-disable-next-line no-undef
-// export const postQuery = graphql`
-//   query PostBySlug($slug: String!) {
-//   allContentfulPost{
-//     edges{
-//       node{
-//         title
-//         slug
-//         excerpt {
-//           excerpt
-//         }
-//         cover {
-//           file {
-//             url
-//             fileName
-//             contentType
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// `;
+//eslint-disable-next-line no-undef
+export const postQuery = graphql`
+  query PostBySlug($slug: String!) {
+  allContentfulPost(filter:{slug: {eq: $slug}}){
+    edges{
+      node{
+        title
+        slug
+        excerpt {
+          excerpt
+        }
+        content {
+          content
+        }
+        cover {
+          file {
+            url
+            fileName
+            contentType
+          }
+        }
+      }
+    }
+  }
+}
+`;
