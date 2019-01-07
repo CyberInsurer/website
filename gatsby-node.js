@@ -102,7 +102,7 @@ exports.createPages = ({ graphql, actions }) => {
           const id = node.id;
 
           createPage({
-            path: "/blog/"+slug,
+            path: slug,
             component: postTemplate,
             context: {
               slug,
