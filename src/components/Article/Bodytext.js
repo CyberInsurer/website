@@ -7,7 +7,9 @@ const Bodytext = props => {
 
   return (
     <React.Fragment>
+      <div className="bodytext">
       <ReactMarkdown source={html} />
+      </div>
       <style jsx>{`
         .bodytext {
           animation-name: bodytextEntry;
