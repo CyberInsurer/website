@@ -22,16 +22,16 @@ const Bodytext = props => {
 
           :global(h2) {
             line-height: ${theme.font.lineHeight.s};
-            font-size: ${theme.font.size.l};
+            font-size: ${theme.font.size.xxl};
           }
 
           :global(h3) {
-            font-size: ${theme.font.size.m};
+            font-size: ${theme.font.size.xl};
             line-height: ${theme.font.lineHeight.m};
           }
 
           :global(p) {
-            font-size: ${theme.font.size.s};
+            font-size: ${theme.font.size.l};
             line-height: ${theme.font.lineHeight.xxl};
             margin: 0 0 1.5em;
           }
@@ -42,6 +42,7 @@ const Bodytext = props => {
           }
           :global(li) {
             margin: 0.7em 0;
+            font-size: ${theme.font.size.l};
             line-height: 1.5;
           }
           :global(a) {
