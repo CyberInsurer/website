@@ -50,8 +50,7 @@ const Item = props => {
           margin: 0;
           padding: ${theme.space.inset.s};
           background: transparent;
-          display: inline-block;
-          width: 380px;
+          display: block;
           vertical-align: top;
           white-space: normal;
         }
@@ -62,7 +61,7 @@ const Item = props => {
           text-remove-gap: both;
           color: ${theme.color.brand.dark};
           padding: 0 ${theme.space.inset.s};
-          margin-bottom: ${theme.space.inset.l};
+          margin-bottom: ${theme.space.inset.m};
         }
 
         .meta {
@@ -89,9 +88,16 @@ const Item = props => {
 
        
         @from-width desktop {
+          
           li {
             margin: 0;
-            padding: 0 0 ${`calc(${theme.space.default} * 2)`};
+            padding: 0;
+            background: transparent;
+            display: inline-block;
+            width: 380px;
+            vertical-align: top;
+            white-space: normal;
+          }
 
             &::after {
               bottom: ${`calc(${theme.space.default} * -1.5)`};
@@ -102,7 +108,7 @@ const Item = props => {
                 top: ${`calc(${theme.space.default} * -2.75)`};
               }
             }
-          }
+          
 
           :global(.blogItemLink:first-child) > li::before {
             top: ${`calc(${theme.space.default} * -2.75)`};

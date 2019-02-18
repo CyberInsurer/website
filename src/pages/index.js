@@ -76,7 +76,7 @@ export default IndexPage;
 //eslint-disable-next-line no-undef
 export const query = graphql`
   query IndexQuery {
-    posts: allContentfulPost{
+    posts: allContentfulPost(sort: {fields: createdAt, order: DESC}) {
     edges{
       node{
         title

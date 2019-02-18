@@ -4,6 +4,7 @@ import "prismjs/themes/prism-okaidia.css";
 
 import Headline from "../Article/Headline";
 import Bodytext from "../Article/Bodytext";
+import Cta from "../Cta"
 
 const Post = props => {
   const {
@@ -20,6 +21,7 @@ const Post = props => {
       </header>
       <Bodytext html={props.post.content.content} theme={theme} />
       <footer>
+        <Cta theme={theme} />
       </footer>
     </React.Fragment>
   );
