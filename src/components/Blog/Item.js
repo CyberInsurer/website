@@ -21,7 +21,7 @@ const Item = props => {
 
   const imgStyle = {
     maxWidth: '100%',
-    height: '180px',
+    height: '240px',
     width: '100%',
   };
 

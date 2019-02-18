@@ -35,10 +35,8 @@ const Footer = props => {
         <div className="column">
           <h4>Social</h4>
           <ul>
-            <li><em><FaRssSquare /></em> Blog</li>
-            <li><em><FaTwitterSquare /></em> Twitter</li>
-            <li><em><FaFacebookSquare /></em> Facebook</li>
-            <li><em><FaLinkedin /></em> Linkedin</li>
+            <li><em><FaTwitterSquare /></em> <a href="https://twitter.com/CyberInsurerUK" target="_blank">Twitter</a></li>
+            <li><em><FaLinkedin /></em> <a href="https://www.linkedin.com/company/cyber-insurer-uk/" target="_blank">Linkedin</a></li>
           </ul>
         </div>
         

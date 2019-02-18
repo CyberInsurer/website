@@ -10,11 +10,12 @@ const Post = props => {
     theme
   } = props;
 
-  // console.log(props.post);
+  console.log(props.post);
 
   return (
     <React.Fragment>
-      <header>
+      <div style={{backgroundImage: "url(" + props.post.cover.file.url + ")"}} className="window" />
+      <header className="postHeader">
         <Headline title={props.post.title} theme={theme} />
       </header>
       <Bodytext html={props.post.content.content} theme={theme} />

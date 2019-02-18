@@ -173,6 +173,19 @@ class Layout extends React.Component {
                         width: auto;
                         display: block;
                       }
+                      .window {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 84px;
+                        height: 500px;
+                        background-size: cover;
+                        z-index: -10;
+                      }
+                      .postHeader {
+                        margin-top: 500px;
+                      }
                     `}</style>
                   </React.Fragment>
                 </ScreenWidthContext.Provider>
