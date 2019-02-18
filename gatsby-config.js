@@ -63,6 +63,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "GTM-MW9S2GN",
+        includeInDevelopment: false,
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

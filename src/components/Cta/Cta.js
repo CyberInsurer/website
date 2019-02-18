@@ -38,6 +38,7 @@ class Cta extends React.Component {
                     margin: 1em auto;
                     max-width: 520px;
                     color: #146586;
+                    line-height: 1.4em;
                 }
 
                 button {

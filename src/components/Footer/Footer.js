@@ -85,6 +85,11 @@ const Footer = props => {
           padding: ${theme.space.inset.xs} 0;
         }
 
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
         em {
           color: ${theme.color.brand.primary};
           padding-right: ${theme.space.inset.xs};
