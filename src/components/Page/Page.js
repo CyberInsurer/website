@@ -10,11 +10,6 @@ const Page = props => {
       html,
       frontmatter: { title }
     },
-    cover: {
-      file: {
-        url
-      }
-    },
     theme
   } = props;
 
