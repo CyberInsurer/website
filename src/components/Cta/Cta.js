@@ -5,7 +5,11 @@ class Cta extends React.Component {
 
     render() {
 
-        const { scrollToContent, theme } = this.props;
+        const { theme } = this.props;
+
+        const scrollToContent = e => {
+            location.href = "https://my.cyberinsurer.staging.incrementby.one/quote"
+        };
     
         return (
             <React.Fragment>
