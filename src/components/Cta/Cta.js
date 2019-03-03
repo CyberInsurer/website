@@ -22,7 +22,6 @@ class Cta extends React.Component {
                 </button>
             </div>
 
-            {/* --- STYLES --- */}
         <style jsx>{`
 
             .quoteBox {
