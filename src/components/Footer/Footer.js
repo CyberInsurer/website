@@ -26,9 +26,7 @@ const Footer = props => {
           <div className="group">
             <h4>Legal</h4>
             <ul>
-              <li>Terms &amp; Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Cookie Policy</li>
+              <li><a href="/privacy">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
