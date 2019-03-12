@@ -8,7 +8,7 @@ const Bodytext = props => {
   return (
     <React.Fragment>
       <div className="bodytext">
-      <ReactMarkdown source={html} />
+        <ReactMarkdown escapeHtml={false} source={html} />
       </div>
       <style jsx>{`
         .bodytext {
