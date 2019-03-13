@@ -59,6 +59,7 @@ class Cta extends React.Component {
                 padding: ${theme.space.s} ${theme.space.l};
                 cursor: pointer;
                 color: ${theme.color.neutral.white};
+                min-height: 44px;
                 
                 &:focus {
                     outline-style: none;

@@ -115,6 +115,7 @@ class Hero extends React.Component {
           cursor: pointer;
           color: ${theme.color.neutral.white};
           margin-bottom: ${theme.space.xs};
+          min-height: 44px;
           
           &:focus {
             outline-style: none;
