@@ -30,7 +30,9 @@ const Item = props => {
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <img src={url} style={imgStyle} />
+            { url && 
+              <img src={url} style={imgStyle} />
+            }
           </div>
           <p className="meta">
               

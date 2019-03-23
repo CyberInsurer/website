@@ -42,7 +42,7 @@ const Footer = props => {
 
       <footer className="copyright">
 
-        <p>&copy; 2018 CyberInsurer Limited. All rights reserved.</p>
+        <p>&copy; 2019 CyberInsUK Limited company number 11458333. All rights reserved.</p>
 
       </footer>
 
