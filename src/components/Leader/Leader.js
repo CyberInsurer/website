@@ -11,7 +11,6 @@ const Leader = props => {
             <section className="leader">
                 <Cyber />
                 <h3>Is your business protected from emerging cyber threats?</h3>
-                <p>With big businesses like Yahoo, Uber, and even the NHS hit by cyber attacks in the last 2 years, it can be easy to consider your business safe.</p>
                 <p>Cyber Insurer simplifies business insurance for startups, micro businesses & SMEs allowing you to purchase peace of mind.</p>
                 <p>Protect your business with cyber insurance from £29.99</p>
                 <button onClick={scrollToContent} aria-label="scroll">
