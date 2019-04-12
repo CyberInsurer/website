@@ -42,7 +42,7 @@ const Footer = props => {
 
       <footer className="copyright">
 
-        <p>&copy; 2019 CyberInsUK Limited company number 11458333. All rights reserved.</p>
+        <p>&copy; 2019. Cyber Insurer is the trading name of CyberInsUK Ltd. Registered in England No. 11458333 and an appointed representative of Cheviot Insurance Services Ltd, authorised and regulated by the Financial Conduct Authority No 667669.</p>
 
       </footer>
 
