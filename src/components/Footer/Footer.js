@@ -43,8 +43,9 @@ const Footer = props => {
       <footer className="copyright">
 
         <p>&copy; 2019. Cyber Insurer is the trading name of CyberInsUK Ltd. Registered in England No. 11458333 and an appointed representative of Cheviot Insurance Services Ltd, authorised and regulated by the Financial Conduct Authority No 667669.</p>
-
-      </footer>
+        <p className="subtle">CyberInsUK LTD, 14 Beatty Avenue, Newcastle upon Tyne NE2 3QP. Companies House Number 1148333. CyberInsU LTD (FCA Reference 824545) is an Appointed Representative of Cheviot Insurance Services LTD, (FCA 667669).</p>
+ 
+        </footer>
 
       {/* --- STYLES --- */}
       <style jsx>{`
@@ -126,7 +127,12 @@ const Footer = props => {
             vertical-align: top;
           }
 
+          .subtle {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.85em;
+            margin-top: 1em;
         }
+      }
       `}</style>
     </React.Fragment>
   );
