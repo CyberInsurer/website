@@ -25,7 +25,7 @@ class Menu extends React.Component {
     this.items = [
       { to: "/", label: "Cyber Insurance" },
       { to: "/about/", label: "About Us" },
-      { to: "https://my.cyberinsurer.staging.incrementby.one/quote", label: "Get A Quote" },
+      { to: "https://my.cyberinsurer.staging.incrementby.one/quote", label: "Get A Quote", external: true },
       { to: "/contact/", label: "Contact" }
     ];
 
