@@ -3,12 +3,20 @@ import React from "react";
 import { ThemeContext } from "../layouts";
 import Article from "../components/Article";
 import Contact from "../components/Contact";
+import Help from "../components/Contact/Help";
 import Headline from "../components/Article/Headline";
 import Seo from "../components/Seo";
 import Typed from 'typed.js';
-import Button from "antd/lib/button";
 
 class ContactPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      showForm: false,
+      showHelp: false
+    };
+  }
 
   componentDidMount() {
 
@@ -34,6 +42,20 @@ class ContactPage extends React.Component {
     this.typed.destroy();
   }
 
+  handleForm = () => {
+    this.setState({
+      showForm: true,
+      showHelp: false
+    });
+  };
+
+  handleClaim = () => {
+    this.setState({
+      showHelp: true,
+      showForm: false
+    });
+  };
+
   render() {
 
   return (
@@ -49,18 +71,19 @@ class ContactPage extends React.Component {
               /></h2>
             </header>
             <div className="space">
-              <Button className="ant-tab" type="primary" htmlType="submit">
+              <a href="https://my.cyberinsurer.staging.incrementby.one/quote" className="ant-tab" type="primary" htmlType="submit">
                 Get a a Quote
-              </Button>
-              <Button className="ant-tab" type="primary" htmlType="submit">
+              </a>
+              <a href="#" className="ant-tab" type="primary" htmlType="submit" onClick={this.handleClaim}>
                 Make a Claim
-              </Button>
-              <Button className="ant-tab" type="primary" htmlType="submit">
+              </a>
+              <a href="#" className="ant-tab" type="primary" htmlType="submit" onClick={this.handleForm}>
                 Something Else?
-              </Button>
+              </a>
             </div>
             <div className="space">
-              <Contact theme={theme} />
+              {this.state.showForm && <Contact />}
+              {this.state.showHelp && <Help />}
             </div>
           </Article>
         )}
@@ -73,8 +96,23 @@ class ContactPage extends React.Component {
           margin: 30px 0;
         }
         .ant-tab {
-          margin-right: 4px;
-          padding: 4px;
+          margin-right: 1px;
+          padding: 8px;
+          background: #68C8AB;
+          min-width: 140px;
+          width: 32%;
+          text-align: center;
+          color: white;
+          display: inline-block;
+        }
+        .ant-tab:hover {
+          background: #7CDFC3;
+        }
+        .ant-tab:first-child {
+          border-radius: 4px 0 0 4px;
+        }
+        .ant-tab:last-child {
+          border-radius: 0 4px 4px 0;
         }
       `}</style>
     </React.Fragment>
