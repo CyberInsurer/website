@@ -130,6 +130,7 @@ class Layout extends React.Component {
                     <style jsx>{`
                       main {
                         min-height: 80vh;
+                        background: #F8FAFC;
                       }
                     `}</style>
                     <style jsx global>{`
@@ -200,7 +201,6 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired
 };
 

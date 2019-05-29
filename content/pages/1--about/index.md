@@ -2,7 +2,7 @@
 title: About Us
 ---
 
-You should never have to spend more than 10 minutes talking to insurance people, we're really boring!
+You should never ever have to spend more than 10 minutes talking to insurance people, we're really boring!
 
 Cyber Insurer UK is on a mission to make buying business cyber insurance quick, simple and pain free, so that busy people running businesses can concentrate on the big stuff, the exciting stuff and their customers and not the tedious stuff like insurance. 
 

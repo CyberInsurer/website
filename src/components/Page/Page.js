@@ -8,17 +8,29 @@ const Page = props => {
   const {
     page: {
       html,
-      frontmatter: { title }
+      frontmatter: { title, featuredImage }
     },
     theme
   } = props;
 
   return (
     <React.Fragment>
-      <header>
-        <Headline title={title} theme={theme} />
-      </header>
-      <Bodytext html={html} theme={theme} />
+      <div className="content">
+        <header>
+          <Headline title={title} featuredImage={featuredImage} theme={theme} />
+        </header>
+        <Bodytext html={html} theme={theme} />
+      </div>
+
+      {/* --- STYLES --- */}
+      <style jsx>{`
+        .content {
+          background: white;
+          padding: 40px;
+          border-radius: 5px;
+          border: 4px solid #DEE9ED;
+        }
+      `}</style>
     </React.Fragment>
   );
 };

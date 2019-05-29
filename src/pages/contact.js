@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { Animated } from "react-animated-css";
+
 import { ThemeContext } from "../layouts";
 import Article from "../components/Article";
 import Contact from "../components/Contact";
 import Help from "../components/Contact/Help";
-import Headline from "../components/Article/Headline";
 import Seo from "../components/Seo";
 import Typed from 'typed.js';
+import Cyber from "../images/svg-icons/cyber.svg";
 
 class ContactPage extends React.Component {
 
@@ -63,27 +65,31 @@ class ContactPage extends React.Component {
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
-            <header>
-              <Headline title="Contact Us" theme={theme} />
-              <h2><span
-                style={{ whiteSpace: 'pre' }}
-                ref={(el) => { this.el = el; }}
-              /></h2>
-            </header>
-            <div className="space">
-              <a href="https://my.cyberinsurer.staging.incrementby.one/quote" className="ant-tab" type="primary" htmlType="submit">
-                Get a a Quote
-              </a>
-              <a href="#" className="ant-tab" type="primary" htmlType="submit" onClick={this.handleClaim}>
-                Make a Claim
-              </a>
-              <a href="#" className="ant-tab" type="primary" htmlType="submit" onClick={this.handleForm}>
-                Something Else?
-              </a>
-            </div>
-            <div className="space">
-              {this.state.showForm && <Contact />}
-              {this.state.showHelp && <Help />}
+            <div className="content">
+              <header>
+                <Animated className="loop" animationIn="tada" isVisible={true}>
+                  <Cyber className="si" />
+                </Animated>
+                <h2><span
+                  style={{ whiteSpace: 'pre' }}
+                  ref={(el) => { this.el = el; }}
+                /></h2>
+              </header>
+              <div className="space">
+                <a href="https://my.cyberinsurer.staging.incrementby.one/quote" className="ant-tab" type="primary">
+                  Get a a Quote
+                </a>
+                <a href="#" className="ant-tab" type="primary" onClick={this.handleClaim}>
+                  Make a Claim
+                </a>
+                <a href="#" className="ant-tab" type="primary" onClick={this.handleForm}>
+                  Something Else?
+                </a>
+              </div>
+              <div className="space">
+                {this.state.showForm && <Contact />}
+                {this.state.showHelp && <Help />}
+              </div>
             </div>
           </Article>
         )}
@@ -95,10 +101,33 @@ class ContactPage extends React.Component {
         .space {
           margin: 30px 0;
         }
+        .content {
+          background: white;
+          padding: 40px;
+          border-radius: 5px;
+          border: 4px solid #DEE9ED;
+        }
+        header {
+          text-align: center;
+        }
+        .loop {
+          animation-iteration-count: infinite !important;
+        }
+        .si {
+          width: 100px;
+          animation-iteration-count: infinite !important;
+        }
+        h2 {
+          text-align: center;
+          color: #146586;
+          font-weight: 400;
+          font-size: 21px;
+          margin-top: 20px;
+        }
         .ant-tab {
           margin-right: 1px;
           padding: 8px;
-          background: #68C8AB;
+          background: #50E3C2;
           min-width: 140px;
           width: 32%;
           text-align: center;
@@ -119,10 +148,6 @@ class ContactPage extends React.Component {
     );
   };
 
-};
-
-ContactPage.propTypes = {
-  data: PropTypes.object.isRequired
 };
 
 export default ContactPage;

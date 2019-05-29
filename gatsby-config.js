@@ -18,6 +18,16 @@ const query = `{
         }
         frontmatter {
           title
+          featuredImage {
+            childImageSharp {
+              resolutions(width: 2000) {
+                width
+                height
+                src
+                srcSet
+              }
+            }
+          }
         }
       }
     }
