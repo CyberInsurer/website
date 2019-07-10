@@ -13,3 +13,5 @@ If your a business with less than £2.5m in turnover we can have you covered in 
 All documents and paperwork are stored online and available in your dashboard at anytime.
 
 So, we're going to be safe and boring, so you don't have to be!
+
+Cyber Insurer UK is Underwritten by the QBE Insurance Group (QBE)
