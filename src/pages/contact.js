@@ -6,6 +6,7 @@ import { ThemeContext } from "../layouts";
 import Article from "../components/Article";
 import Contact from "../components/Contact";
 import Help from "../components/Contact/Help";
+import Complaints from "../components/Contact/Complaints";
 import Seo from "../components/Seo";
 import Typed from 'typed.js';
 import Cyber from "../images/svg-icons/cyber.svg";
@@ -47,6 +48,7 @@ class ContactPage extends React.Component {
   handleForm = () => {
     this.setState({
       showForm: true,
+      showComplaints: false,
       showHelp: false
     });
   };
@@ -54,7 +56,16 @@ class ContactPage extends React.Component {
   handleClaim = () => {
     this.setState({
       showHelp: true,
+      showComplaints: false,
       showForm: false
+    });
+  };
+
+  handleComplaint = () => {
+    this.setState({
+      showHelp: false,
+      showForm: false,
+      showComplaints: true
     });
   };
 
@@ -79,16 +90,26 @@ class ContactPage extends React.Component {
                 <a href="https://my.cyberinsurer.staging.incrementby.one/quote" className="ant-tab" type="primary">
                   Get a a Quote
                 </a>
-                <a href="#" className="ant-tab" type="primary" onClick={this.handleClaim}>
+                <a href="#" className={
+                  this.state.showHelp ? 'active-tab' : 'ant-tab'
+                } type="primary" onClick={this.handleClaim}>
                   Make a Claim
                 </a>
-                <a href="#" className="ant-tab" type="primary" onClick={this.handleForm}>
+                <a href="#" className={
+                  this.state.showComplaints ? 'active-tab' : 'ant-tab'
+                } type="primary" onClick={this.handleComplaint}>
+                  Complaints
+                </a>
+                <a href="#" className={
+                  this.state.showForm ? 'active-tab' : 'ant-tab'
+                } type="primary" onClick={this.handleForm}>
                   Something Else?
                 </a>
               </div>
               <div className="space">
                 {this.state.showForm && <Contact />}
                 {this.state.showHelp && <Help />}
+                {this.state.showComplaints && <Complaints />}
               </div>
             </div>
           </Article>
@@ -129,7 +150,7 @@ class ContactPage extends React.Component {
           padding: 8px;
           background: #50E3C2;
           min-width: 140px;
-          width: 32%;
+          width: 24%;
           text-align: center;
           color: white;
           display: inline-block;
@@ -141,6 +162,25 @@ class ContactPage extends React.Component {
           border-radius: 4px 0 0 4px;
         }
         .ant-tab:last-child {
+          border-radius: 0 4px 4px 0;
+        }
+        .active-tab {
+          margin-right: 1px;
+          padding: 8px;
+          background: #68C8AC;
+          min-width: 140px;
+          width: 24%;
+          text-align: center;
+          color: white;
+          display: inline-block;
+        }
+        .active-tab:hover {
+          background: #7CDFC3;
+        }
+        .active-tab:first-child {
+          border-radius: 4px 0 0 4px;
+        }
+        .active-tab:last-child {
           border-radius: 0 4px 4px 0;
         }
       `}</style>

@@ -100,6 +100,7 @@ const Contact = props => {
                 </Button>
               </FormItem>
             </Form>
+            <p>You can also call us on 0191 375 8788</p>
 
             {/* --- STYLES --- */}
             <style jsx>{`
