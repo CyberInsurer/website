@@ -12,7 +12,7 @@ const Leader = props => {
                 <Cyber />
                 <h3>Is your business protected from emerging cyber threats?</h3>
                 <p>Cyber Insurer simplifies business insurance for startups, micro businesses & SMEs allowing you to purchase peace of mind.</p>
-                <p>Protect your business with cyber insurance from £29.99</p>
+                <p>Protect your business with cyber insurance from £37.78</p>
                 <button onClick={scrollToContent} aria-label="scroll">
                     Get Covered Today
                 </button>
