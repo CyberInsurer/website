@@ -52,6 +52,7 @@ color:
       i: '#514f4d'
       j: &color-gray-10 '#3e3e3c'
       k: '#2b2826'
+      l: '#F8FAFC'
     black: '#000000'
   brand:
     primary: &color-brand-primary '#50E3C2'
@@ -113,7 +114,7 @@ text:
     default: *font-line-height-l
   maxWidth:
     tablet: 650px
-    desktop: 700px
+    desktop: 900px
 heading:
   family: *font-family-target
   size:

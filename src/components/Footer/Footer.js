@@ -18,15 +18,16 @@ const Footer = props => {
           <div className="group">
             <h4>Company</h4>
             <ul>
-              <li>About Us</li>
-              <li>Articles</li>
-              <li>Contact Us</li>
+              <li><a href="/about">About Us</a></li>
+              {/* <li>Articles</li> */}
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div className="group">
             <h4>Legal</h4>
             <ul>
-              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/policy">Our Policy</a></li>
             </ul>
           </div>
         </div>
@@ -87,6 +88,10 @@ const Footer = props => {
         a {
           color: white;
           text-decoration: none;
+        }
+
+        a:hover {
+          color: #7CDFC3;
         }
 
         em {
