@@ -40,7 +40,6 @@ const Contact = props => {
       body: encode({ "form-name": "contact", ...values })
     })
       .then(() => {
-        console.log("Form submission success");
         navigate("/success");
       })
       .catch(error => {
@@ -73,6 +72,15 @@ const Contact = props => {
                   ]
                 })(<Input name="name" />)}
               </FormItem>
+              <FormItem label="Policy Number:">
+                {getFieldDecorator("policy", {
+                  rules: [
+                    {
+                      whitespace: true
+                    }
+                  ]
+                })(<Input name="policy" />)}
+              </FormItem>
               <FormItem label="E-mail">
                 {getFieldDecorator("email", {
                   rules: [
@@ -85,7 +93,7 @@ const Contact = props => {
                   ]
                 })(<Input name="email" />)}
               </FormItem>
-              <FormItem label="Message">
+              <FormItem label="Cancellation Reason:">
                 {getFieldDecorator("message", {
                   rules: [
                     { required: true, message: "Please input your message!", whitespace: true }

@@ -103,7 +103,7 @@ class ContactPage extends React.Component {
                 <a href="#" className={
                   this.state.showForm ? 'active-tab' : 'ant-tab'
                 } type="primary" onClick={this.handleForm}>
-                  Something Else?
+                  Cancellation
                 </a>
               </div>
               <div className="space">
