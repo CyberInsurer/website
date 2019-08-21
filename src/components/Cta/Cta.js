@@ -15,7 +15,7 @@ class Cta extends React.Component {
             <React.Fragment>
             <div className="quoteBox">
                 <h1>Get a Quote Today</h1>
-                <p>With cover available from as little as £37.78, Cyber Insurer UK provides an innovative insurance product which can protect your business.</p>
+                <p>With cover available from as little as £37.63, Cyber Insurer UK provides an innovative insurance product which can protect your business.</p>
                 <p>Get a quote today in under 60 seconds and protect your business with Cyber Insurer UK</p>
                 <button onClick={scrollToContent} aria-label="scroll">
                 Get Covered Today

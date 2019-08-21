@@ -41,7 +41,7 @@ class Hero extends React.Component {
             />
         </h1>
         <h2>
-          Protect your business from as little as &pound;37.78
+          Protect your business from as little as &pound;37.63
         </h2>
         <button onClick={scrollToContent} aria-label="scroll">
           Get Covered Today
