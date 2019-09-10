@@ -27,7 +27,7 @@ const Footer = props => {
             <h4>Legal</h4>
             <ul>
               <li><a href="/privacy">Privacy</a></li>
-              <li><a href="/policy">Our Policy</a></li>
+              <li><a href="/policy_full.pdf" target="_blank">Our Policy</a></li>
             </ul>
           </div>
         </div>
