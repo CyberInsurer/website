@@ -9,7 +9,21 @@ const Complaints = props => {
             <div className="tab-content">
                 <p class="intro">We’re really sorry if it feels like we have let you down and whatever it is we want to put it right, quickly with no fuss and in a way that makes you happy.</p>
                 <p>Our policy is underwritten by QBE, one of the largest insurers and reinsurers in the World. We’d like you to be able to speak with them directly to ensure independent, impartial and professional resolution of your complaint. </p>
-                <p>Please contact QBE on customerrelations@uk.qbe.com</p>
+                <p>You can reach QBE by:</p>
+                <dl>
+                    <dt>Calling</dt>
+                    <dd>020 7105 5988</dd>
+                    <dt>Emailing</dt>
+                    <dd>customerrelations@uk.qbe.com</dd>
+                    <dt>Writing</dt>
+                    <dd>Customer Relations<br />
+                        QBE European Operations<br />
+                        Plantation Place<br />
+                        30 Fenchurch Street<br />
+                        London<br />
+                        EC3M 3BD<br />
+                    </dd>
+                </dl>
                 <p>Thanks</p>
                 <p>Si.</p>
             </div>
@@ -49,14 +63,21 @@ const Complaints = props => {
 
               p {
                   margin: 0 0 1.6em;
+                  clear: both;
               }
 
               dt {
-                  font-weight: bold;
+                font-weight: bold;
+                display: block;
+                float: left;
+                clear: left;
+                width: 180px;
               }
 
               dd {
                   margin: 0 0 1.6em;
+                  display: block;
+                  float: left;
               }
 
               p.intro {
