@@ -7,6 +7,7 @@ import Article from "../components/Article";
 import Contact from "../components/Contact";
 import Help from "../components/Contact/Help";
 import Complaints from "../components/Contact/Complaints";
+import ChangingForm from "../components/Contact/Changing";
 import Seo from "../components/Seo";
 import Typed from 'typed.js';
 import Cyber from "../images/svg-icons/cyber.svg";
@@ -49,6 +50,16 @@ class ContactPage extends React.Component {
     this.setState({
       showForm: true,
       showComplaints: false,
+      showHelp: false,
+      showChanging: false
+    });
+  };
+
+  handleChanging = () => {
+    this.setState({
+      showForm: false,
+      showChanging: true,
+      showComplaints: false,
       showHelp: false
     });
   };
@@ -57,7 +68,8 @@ class ContactPage extends React.Component {
     this.setState({
       showHelp: true,
       showComplaints: false,
-      showForm: false
+      showForm: false,
+      showChanging: false
     });
   };
 
@@ -96,6 +108,11 @@ class ContactPage extends React.Component {
                   Make a Claim
                 </a>
                 <a href="#" className={
+                  this.state.showChanging ? 'active-tab' : 'ant-tab'
+                } type="primary" onClick={this.handleChanging}>
+                  Changing Something
+                </a>
+                <a href="#" className={
                   this.state.showComplaints ? 'active-tab' : 'ant-tab'
                 } type="primary" onClick={this.handleComplaint}>
                   Complaints
@@ -110,6 +127,7 @@ class ContactPage extends React.Component {
                 {this.state.showForm && <Contact />}
                 {this.state.showHelp && <Help />}
                 {this.state.showComplaints && <Complaints />}
+                {this.state.showChanging && <ChangingForm />}
               </div>
             </div>
           </Article>
@@ -150,7 +168,7 @@ class ContactPage extends React.Component {
           padding: 8px;
           background: #50E3C2;
           min-width: 140px;
-          width: 24%;
+          width: 19.5%;
           text-align: center;
           color: white;
           display: inline-block;
@@ -169,7 +187,7 @@ class ContactPage extends React.Component {
           padding: 8px;
           background: #68C8AC;
           min-width: 140px;
-          width: 24%;
+          width: 19%;
           text-align: center;
           color: white;
           display: inline-block;
