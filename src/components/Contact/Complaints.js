@@ -7,8 +7,8 @@ const Complaints = props => {
     return (
         <React.Fragment>
             <div className="tab-content">
-                <p class="intro">We’re really sorry if it feels like we have let you down and whatever it is we want to put it right, quickly with no fuss and in a way that makes you happy.</p>
-                <p>Our policy is underwritten by QBE Underwriting Limited, one of the largest insurers and reinsurers in the World. We’d like you to be able to speak with them directly to ensure independent, impartial and professional resolution of your complaint. </p>
+                <p class="intro">We're really sorry if it feels like we have let you down and whatever it is we want to put it right, quickly with no fuss and in a way that makes you happy.</p>
+                <p>Our policy is underwritten by QBE Limited and QBE Underwriting Limited, one of the largest insurers and reinsurers in the World. We’d like you to be able to speak with them directly to ensure independent, impartial and professional resolution of your complaint. </p>
                 <p>You can reach QBE UK Limited by:</p>
                 <dl>
                     <dt>Calling</dt>

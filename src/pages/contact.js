@@ -77,7 +77,8 @@ class ContactPage extends React.Component {
     this.setState({
       showHelp: false,
       showForm: false,
-      showComplaints: true
+      showComplaints: true,
+      showChanging: false
     });
   };
 
