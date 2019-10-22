@@ -27,7 +27,7 @@ class ContactPage extends React.Component {
     const options = {
       strings: [
         "Greetings! I'm Si.",
-        "How can I help you today?", 
+        "How can I help you today?",
         "Si, at your service.",
         "Choose from one of the options below..."
       ],
@@ -100,7 +100,7 @@ class ContactPage extends React.Component {
                 /></h2>
               </header>
               <div className="space">
-                <a href="https://my.cyberinsurer.staging.incrementby.one/quote" className="ant-tab" type="primary">
+                <a href="https://my.cyberinsurer.uk/quote" className="ant-tab" type="primary">
                   Get a a Quote
                 </a>
                 <a href="#" className={

@@ -14,7 +14,7 @@ class IndexPage extends React.Component {
   separator = React.createRef();
 
   scrollToContent = e => {
-    location.href = "https://my.cyberinsurer.staging.incrementby.one/quote"
+    location.href = "https://my.cyberinsurer.uk/quote"
   };
 
   render() {

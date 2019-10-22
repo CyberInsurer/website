@@ -8,9 +8,9 @@ class Cta extends React.Component {
         const { theme } = this.props;
 
         const scrollToContent = e => {
-            location.href = "https://my.cyberinsurer.staging.incrementby.one/quote"
+            location.href = "https://my.cyberinsurer.uk/quote"
         };
-    
+
         return (
             <React.Fragment>
             <div className="quoteBox">
@@ -60,7 +60,7 @@ class Cta extends React.Component {
                 cursor: pointer;
                 color: ${theme.color.neutral.white};
                 min-height: 44px;
-                
+
                 &:focus {
                     outline-style: none;
                     background: ${theme.color.brand.primary.active};
@@ -76,7 +76,7 @@ class Cta extends React.Component {
             }
             `}</style>
             </React.Fragment>
-            
+
 
         );
 
