@@ -43,7 +43,7 @@ class Hero extends React.Component {
         <h2>
           Protect your business from as little as &pound;37.63 per month
         </h2>
-        <button onClick={scrollToContent} aria-label="scroll">
+        <button className="getQuote" onClick={scrollToContent} aria-label="scroll">
           Get Covered Today
         </button>
         <p>Get a personalised quote in under 60 seconds...</p>

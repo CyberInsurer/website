@@ -1,5 +1,4 @@
 import React from "react";
-import config from "../../../content/meta/config";
 
 class Cta extends React.Component {
 
@@ -17,7 +16,7 @@ class Cta extends React.Component {
                 <h1>Get a Quote Today</h1>
                     <p>With cover available from as little as £37.63 per month, Cyber Insurer UK provides an innovative insurance product which can protect your business.</p>
                 <p>Get a quote today in under 60 seconds and protect your business with Cyber Insurer UK</p>
-                <button onClick={scrollToContent} aria-label="scroll">
+                <button className="getQuote" onClick={scrollToContent} aria-label="scroll">
                 Get Covered Today
                 </button>
             </div>
