@@ -34,8 +34,8 @@ const Footer = props => {
         <div className="column">
           <h4>Social</h4>
           <ul>
-            <li><em><FaTwitterSquare /></em> <a href="https://twitter.com/CyberInsurerUK" target="_blank">Twitter</a></li>
-            <li><em><FaLinkedin /></em> <a href="https://www.linkedin.com/company/cyber-insurer-uk/" target="_blank">Linkedin</a></li>
+            <li><em><FaTwitterSquare /></em> <a href="https://twitter.com/CyberInsurerUK" rel="noreferrer" target="_blank">Twitter</a></li>
+            <li><em><FaLinkedin /></em> <a href="https://www.linkedin.com/company/cyber-insurer-uk/" rel="noreferrer" target="_blank">Linkedin</a></li>
           </ul>
         </div>
         
