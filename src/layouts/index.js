@@ -182,7 +182,6 @@ class Layout extends React.Component {
                         top: 84px;
                         height: 500px;
                         background-size: cover;
-                        z-index: -10;
                       }
                       .postHeader {
                         margin-top: 500px;

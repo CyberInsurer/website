@@ -15,7 +15,7 @@ const Post = props => {
 
   return (
     <React.Fragment>
-      <div style={{backgroundImage: "url(" + props.post.cover.file.url + ")"}} className="window" />
+      <div style={{ backgroundImage: "url(" + props.post.cover.file.url + '?w=1200' + ")"}} className="window" />
       <header className="postHeader">
         <Headline title={props.post.title} theme={theme} />
       </header>

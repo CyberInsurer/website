@@ -14,6 +14,8 @@ class IndexPage extends React.Component {
   separator = React.createRef();
 
   scrollToContent = e => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'event': 'getQuote' })
     location.href = "https://my.cyberinsurer.uk/quote"
   };
 

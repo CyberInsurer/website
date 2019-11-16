@@ -33,27 +33,27 @@ const query = `{
     }
   }
   allContentfulPost{
-              edges{
-                node{
-                  id
-                  title
-                  slug
-                  excerpt{
-                    excerpt
-                  }
-                  content {
-                    content
-                  }
-                  cover {
-                    file {
-                      url
-                      fileName
-                      contentType
-                    }
-                  }
-                }
-              }
-            }
+    edges{
+      node{
+        id
+        title
+        slug
+        excerpt{
+          excerpt
+        }
+        content {
+          content
+        }
+        cover {
+          file {
+            url
+            fileName
+            contentType
+          }
+        }
+      }
+    }
+  }
 }`;
 
 module.exports = {

@@ -9,6 +9,9 @@ export default class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <script>
+            dataLayer = [];
+          </script>
           {this.props.headComponents}
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8" />

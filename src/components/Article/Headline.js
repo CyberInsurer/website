@@ -7,7 +7,7 @@ const Headline = props => {
   return (
     <React.Fragment>
       {featuredImage &&
-        <div style={{ backgroundImage: "url(" + featuredImage.childImageSharp.fluid.src + ")" }} className="window" />
+        <div style={{ backgroundImage: "url(" + featuredImage.childImageSharp.fluid.src + '?w=1200' + ")" }} className="window" />
       }
 
       {title ? <h1>{title}</h1> : <h1>{children}</h1>}
