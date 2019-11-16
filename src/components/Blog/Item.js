@@ -31,7 +31,7 @@ const Item = props => {
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
             { url && 
-              <img src={url + '?w=380'} style={imgStyle} />
+              <img src={url + '?w=380'} alt={title} style={imgStyle} />
             }
           </div>
           <p className="meta">

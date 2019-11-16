@@ -82,12 +82,13 @@ const Footer = props => {
 
         li {
           color: white;
-          padding: ${theme.space.inset.xs} 0;
         }
 
         a {
           color: white;
           text-decoration: none;
+          display: inline-block;
+          padding: ${theme.space.inset.s} 2px;
         }
 
         a:hover {
