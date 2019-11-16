@@ -37,7 +37,7 @@ class Header extends React.Component {
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
-              <Logo />
+              <Logo />CyberInsurer
             </div>
           </Link>
           <FontLoadedContext.Consumer>
@@ -112,6 +112,7 @@ class Header extends React.Component {
             margin: ${theme.space.inline.default};
             overflow: hidden;
             transition: all 0.5s;
+            font-size: 0;
 
             img {
               width: 100%;
