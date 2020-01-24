@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Curve from "../../images/png/curve.png";
 
 class AltHero extends React.Component {
 
@@ -38,7 +37,7 @@ class AltHero extends React.Component {
       <style jsx>{`
         .hero {
           align-items: center;
-          background: url('bg.jpg') no-repeat;
+          background: url(/bg.jpg) no-repeat;
           background-size: cover;
           color: ${theme.text.color.primary};
           display: flex;
