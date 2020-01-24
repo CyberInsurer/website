@@ -103,6 +103,7 @@ background:
     primary: *color-white
     alt: '#F8FAFA'
     brand: *color-brand-primary
+    dark:  *color-brand-dark
 text:
   family: *font-family-target
   color:
@@ -145,6 +146,9 @@ hero:
   background: 'linear-gradient(180deg, #F8FAFA, #FFFFFF)'
 button:
   background: 'linear-gradient(180deg, #1B7AA0, #146586)'
+buttonalt:
+  background: 'linear-gradient(180deg, #68C8AC, #7CE0C3)'
+  hover: 'linear-gradient(180deg, #7CE0C3, #68C8AC)'
 blog:
   h1:
     size: 21px

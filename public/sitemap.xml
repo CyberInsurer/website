@@ -17,4 +17,5 @@
 <url> <loc>https://cyberinsurer.uk/success/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://cyberinsurer.uk/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://cyberinsurer.uk/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://cyberinsurer.uk/lander/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
